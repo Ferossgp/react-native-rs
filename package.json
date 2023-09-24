@@ -30,8 +30,9 @@
     "test": "jest",
     "typecheck": "tsc --noEmit",
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
-    "clean": "del-cli android/build example/android/build example/android/app/build example/ios/build lib",
+    "clean": "del-cli android/build example/android/build example/android/app/build example/ios/build lib target rust/bindings",
     "prepack": "bob build",
+    "build-rust": "./rust/build_android.sh && ./rust/build_ios.sh",
     "release": "release-it",
     "example": "yarn workspace react-native-awesome-rs-library-example"
   },

@@ -1,0 +1,9 @@
+[bindings.kotlin]
+package_name = "com.awesomerslibrary"
+cdylib_name = "awesome"
+
+[bindings.swift]
+cdylib_name = "awesome"
+ffi_module_name = "Awesome"
+ffi_module_filename = "awesomeFFI"
+generate_module_map = true

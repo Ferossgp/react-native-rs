@@ -1,0 +1,9 @@
+[workspace]
+members = [
+    "./rust/awesome",
+    "./rust/uniffi-bindgen",
+]
+
+[profile.release]
+strip = true
+lto = true

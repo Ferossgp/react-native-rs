@@ -3,12 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5E555C0D2413F4C50049A1A2 /* AwesomeRsLibrary.mm in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* AwesomeRsLibrary.mm */; };
-		F4FF95D7245B92E800C19C63 /*  AwesomeRsLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FF95D6245B92E800C19C63 /*  AwesomeRsLibrary.swift */; };
+		0DAE80AD2AC02F7900D31CC7 /* libawesome.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DAE80AC2AC02F7900D31CC7 /* libawesome.xcframework */; };
+		0DAE80B22AC02FD000D31CC7 /* awesomeFFI.h in Headers */ = {isa = PBXBuildFile; fileRef = 0DAE80B02AC02FC100D31CC7 /* awesomeFFI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0DAE80B32AC02FD600D31CC7 /* AwesomeRsLibrary-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = F4FF95D5245B92E700C19C63 /* AwesomeRsLibrary-Bridging-Header.h */; };
+		0DAE80B52AC0301B00D31CC7 /* awesome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DAE80B42AC0301B00D31CC7 /* awesome.swift */; };
+		F4FF95D7245B92E800C19C63 /* AwesomeRsLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FF95D6245B92E800C19C63 /* AwesomeRsLibrary.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,6 +27,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0DAE80AC2AC02F7900D31CC7 /* libawesome.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = libawesome.xcframework; sourceTree = "<group>"; };
+		0DAE80B02AC02FC100D31CC7 /* awesomeFFI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = awesomeFFI.h; sourceTree = "<group>"; };
+		0DAE80B12AC02FC100D31CC7 /* awesomeFFI.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = awesomeFFI.modulemap; sourceTree = "<group>"; };
+		0DAE80B42AC0301B00D31CC7 /* awesome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = awesome.swift; sourceTree = "<group>"; };
 		134814201AA4EA6300B7C361 /* libAwesomeRsLibrary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAwesomeRsLibrary.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3E7B5891CC2AC0600A0062D /* AwesomeRsLibrary.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AwesomeRsLibrary.mm; sourceTree = "<group>"; };
 		F4FF95D5245B92E700C19C63 /* AwesomeRsLibrary-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AwesomeRsLibrary-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -35,12 +42,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DAE80AD2AC02F7900D31CC7 /* libawesome.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0DAE80AB2AC02F7900D31CC7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0DAE80AC2AC02F7900D31CC7 /* libawesome.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0DAE80AF2AC02FC100D31CC7 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				0DAE80B02AC02FC100D31CC7 /* awesomeFFI.h */,
+				0DAE80B12AC02FC100D31CC7 /* awesomeFFI.modulemap */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
 		134814211AA4EA7D00B7C361 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -52,25 +77,42 @@
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
+				0DAE80B42AC0301B00D31CC7 /* awesome.swift */,
 				F4FF95D6245B92E800C19C63 /* AwesomeRsLibrary.swift */,
 				B3E7B5891CC2AC0600A0062D /* AwesomeRsLibrary.mm */,
 				F4FF95D5245B92E700C19C63 /* AwesomeRsLibrary-Bridging-Header.h */,
+				0DAE80AF2AC02FC100D31CC7 /* include */,
 				134814211AA4EA7D00B7C361 /* Products */,
+				0DAE80AB2AC02F7900D31CC7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0DAE80AE2AC02F9800D31CC7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0DAE80B22AC02FD000D31CC7 /* awesomeFFI.h in Headers */,
+				0DAE80B32AC02FD600D31CC7 /* AwesomeRsLibrary-Bridging-Header.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		58B511DA1A9E6C8500147676 /* AwesomeRsLibrary */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 58B511EF1A9E6C8500147676 /* Build configuration list for PBXNativeTarget "AwesomeRsLibrary" */;
 			buildPhases = (
-				58B511D71A9E6C8500147676 /* Sources */,
 				58B511D81A9E6C8500147676 /* Frameworks */,
+				58B511D71A9E6C8500147676 /* Sources */,
+				0DAE80AE2AC02F9800D31CC7 /* Headers */,
 				58B511D91A9E6C8500147676 /* CopyFiles */,
 			);
 			buildRules = (
+				0DAE80B62AC0391D00D31CC7 /* PBXBuildRule */,
 			);
 			dependencies = (
 			);
@@ -116,6 +158,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DAE80B52AC0301B00D31CC7 /* awesome.swift in Sources */,
 				F4FF95D7245B92E800C19C63 /* AwesomeRsLibrary.swift in Sources */,
 				B3E7B58A1CC2AC0600A0062D /* AwesomeRsLibrary.mm in Sources */,
 			);
