@@ -2,11 +2,24 @@
 
 Example Rust into React Native integration
 
-## Installation
+Before getting started please make sure that you have your React Native and Rust env configured.
 
-```sh
-npm install react-native-awesome-rs-library
-```
+## Build
+
+`./rust/build_android.sh` - will generate the so binary and Kotlin interface
+
+`./rust/build_ios.sh` - will generate the binary and Swift interface
+
+or use the npm script:
+
+`yarn build-rust`
+
+
+Test with the example app:
+
+`yarn install` - install all necessary dependencies
+`yarn example ios` - run the example app on iOS
+`yarn example android` - run the example app on Android
 
 ## Usage
 
